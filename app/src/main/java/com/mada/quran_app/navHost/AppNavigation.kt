@@ -23,7 +23,9 @@ fun AppNavigation(){
             }
         }
         composable("main") {
-            QuranScreen()
+            QuranScreen { surahNumber ->
+                navController.navigate("ayah_count/$surahNumber")
+            }
         }
         
     }
